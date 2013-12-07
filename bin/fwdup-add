@@ -1,0 +1,5 @@
+#!/bin/sh
+# Add files to be tracked by fwdup.
+
+git add -f "$*"
+git commit -a -m "Importing: $*"

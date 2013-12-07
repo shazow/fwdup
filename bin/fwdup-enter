@@ -1,0 +1,10 @@
+#!/bin/sh
+
+storage_dir="$1"
+
+if [ ! "$storage_dir" ]; then
+    echo "Usage: $0 STORAGE_DIR"
+    exit 1
+fi
+
+export GIT_DIR="$storage_dir"

@@ -1,0 +1,4 @@
+#!/bin/sh
+# List all files currently being tracked by fwdup.
+
+git ls-tree -r master --name-only

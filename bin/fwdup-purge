@@ -1,0 +1,13 @@
+#!/bin/sh
+# Remove all references to a file in repo.
+
+target="$1"
+
+if [ ! "$target" ]; then
+    echo "Usage: $0 TARGET"
+    exit 1
+fi
+
+git filter-branch --force --index-filter \
+    "git rm --cached --ignore-unmatch \"$target\"" \
+    --prune-empty --tag-name-filter cat -- --all

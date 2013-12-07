@@ -1,0 +1,18 @@
+#!/bin/bash
+
+path="$(dirname $0)"
+cmd="$1"
+
+if [ ! "$cmd" ]; then
+    echo "Usage: $0 COMMAND"
+    echo ""
+    echo "Where COMMAND is one of:"
+    for cmd in $path/fwdup-*; do
+        echo "  ${cmd##$0-}"
+    done
+    exit 1
+fi
+
+shift
+
+$path/fwdup-$cmd $*
