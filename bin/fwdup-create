@@ -1,0 +1,24 @@
+#!/bin/sh
+
+storage_dir="$1"
+target_root="$2"
+
+if [ ! "$storage_dir" ]; then
+    echo "Usage: $0 STORAGE_DIR [TARGET_ROOT]"
+    exit 1
+fi
+
+if [ ! "$target_root" ]; then
+    target_root="$HOME"
+fi
+
+if [ ! -d "$target_root" ]; then
+    echo "Target root does not exist: $target_root"
+    exit 2
+fi
+
+mkdir -p "$storage_dir"
+
+GIT_DIR="$storage_dir" GIT_WORKING_TREE="$target_root" git init
+GIT_DIR="$storage_dir" git config core.worktree "$target_root"
+echo '/*' >> "$storage_dir/info/exclude"
