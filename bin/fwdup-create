@@ -21,4 +21,5 @@ mkdir -p "$storage_dir"
 
 GIT_DIR="$storage_dir" GIT_WORKING_TREE="$target_root" git init
 GIT_DIR="$storage_dir" git config core.worktree "$target_root"
+GIT_DIR="$storage_dir" git config core.bare --bool false
 echo '/*' >> "$storage_dir/info/exclude"

@@ -1,4 +1,5 @@
 #!/bin/sh
+# FIXME: This doesn't work of course, because we'd need to source it.
 
 storage_dir="$1"
 
