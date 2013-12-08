@@ -14,9 +14,9 @@ Here's what it looks like right now:
 
 ```
 $ # Add the scripts to your PATH
-$ export PATH="$PWD/bin:$PATH"
-$ fwdup
-Usage: /Users/shazow/projects/fwdup/bin/fwdup COMMAND
+~/projects/fwdup $ export PATH="$PWD/bin:$PATH"
+~/projects/fwdup $ fwdup
+Usage: fwdup COMMAND
 
 Where COMMAND is one of:
   add
@@ -25,19 +25,19 @@ Where COMMAND is one of:
   manifest
   purge
 
-$ # Create a backup storage (aka a git repo with a detached working tree)
-$ fwdup create mybackup
+~/projects/fwdup $ # Create a backup storage (aka a git repo with a detached working tree)
+~/projects/fwdup $ fwdup create mybackup
 Initialized empty Git repository in /Users/shazow/projects/fwdup/mybackup/
 
-$ # Start choosing things to back up
-$ # FIXME: Use `fwdup-enter` instead somehow. Right now it's exceptionally sad.
-$ export GIT_DIR=$PWD/mybackup
-$ cd ~
-$ fwdup add .vimrc
+~/projects/fwdup $ # Start choosing things to back up
+~/projects/fwdup $ # FIXME: Use `fwdup-enter` instead somehow. Right now it's exceptionally sad.
+~/projects/fwdup $ export GIT_DIR=$PWD/mybackup
+~/ $ cd ~
+~/ $ fwdup add .vimrc
 [master 3c8f005] Importing: .vimrc
  6 files changed, 11 insertions(+), 10 deletions(-)
  create mode 100644 .vimrc
-$ fwdup manifest
+~/ $ fwdup manifest
 .vimrc
 
 $ # Now we can push to some remote that we have a bare git repo on, and it's backed up.
