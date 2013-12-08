@@ -6,7 +6,7 @@ You know what would be fun? If we set `GIT_WORK_TREE` to `$HOME` (or root, if yo
 
 This works surprisingly well for small rarely-changing files like settings and configurations.
 
-I hacked this up together in about an hour and only used it once for anything significant, so it's still quite lacking. I hope to continue fleshing it out with some ideas below.
+I hacked this up together in about an hour and only used it once for anything significant, so it's still quite lacking. I hope to continue fleshing it out with some ideas below. To be perfectly honest, I'm not convinced the Bash scripts are there more for documentation than anything. Maybe it's not even necessary.
 
 ## Overview
 
