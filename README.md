@@ -1,4 +1,4 @@
-# **fwdup**: like back-up, but forward
+# **fwdup**: like back-ups, but forward
 
 **This is super-duper experimental and incomplete, use at your own risk.**
 
