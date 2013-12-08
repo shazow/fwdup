@@ -13,7 +13,7 @@ I hacked this up together in about an hour and only used it once for anything si
 Here's what it looks like right now:
 
 ```
-$ # Add the scripts to your PATH
+~/projects/fwdup $ # Add the scripts to your PATH
 ~/projects/fwdup $ export PATH="$PWD/bin:$PATH"
 ~/projects/fwdup $ fwdup
 Usage: fwdup COMMAND
